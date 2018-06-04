@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="/views/action/jsp_include.jsp">1.Action Tag(include지시자)</a><br>
+<a href="/views/action/jsp_forward.jsp">2.Action Tag(forward지시자)</a><br>
+<form action="/views/action/jsp_forward2.jsp" method="get">
+<input type="text" name="value" />
+<input type="submit" value="전송" />
+</form>
+<br>
+<a href="/views/action/jsp_useBean.jsp">4.Action Tag(Bean)</a>
+<a href="/useBean">5.useBean 응용</a>
+<hr>
+
+<h3>EL</h3>
+<a href="/eL_Test1">1. 단일 VO처리</a>
+<a href="/eL_Test2">2. MAP 처리</a>
+<a href="/eL_Test3">3. 배열 처리</a>
+<a href="/eL_Test4">4. List 처리</a>
+
+<hr>
+<h3>JSTL</h3>
+
+<a href="/views/jstl/jstl_basic.jsp">1. JSTL 기초1</a><br>
+<a href="/jstl_basic2">2.JSTL기초2(forEach)</a><br>
+
+3.JSTL 기초3
+<form action="/views/jstl/jstl_forTokens.jsp">
+	당신의 취미를 적어보세요(다중일시,로 구분) :
+	<input type="text" name="hobby" />
+	<input type="submit" value="전송" />
+</form>
+
+<a href="/views/jstl/jstl_url.jsp">4 .JSTL 기초4(url)</a>
+
+</body>
+</html>
