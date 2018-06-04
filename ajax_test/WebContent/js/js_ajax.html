@@ -6,8 +6,8 @@
 </head>
 <body>
 	
-	입력 : <input type="text" id="data1"/>
-	<button onclick="test1()">클릭</button>
+	입력 : <input type="text" id="data1" onchange="test1();"/><span id="span1"></span>
+
 	
 <script>	
 	function test1()
@@ -54,6 +54,17 @@
 				if(this.status==200){
 					
 					console.log("서버에 데이터 전송 성공");
+
+					var result=xhttp.responseText;
+					
+					if(result==1){
+						document.getElementById('span1').innerHTML = "사용 가능한 ID";
+						document.getElementById('span1').style="color:red";
+					}else{
+						document.getElementById('span1').innerHTML = "사용 불가능한 ID";
+						document.getElementById('span1').style="color:blue";
+					}
+					
 					
 				}else if(this.status==404){
 					console.log("서버에 데이터 전송 실패");
