@@ -63,6 +63,7 @@
 <h2>8. 서버로 기본형 데이터 여러개 전송,서버에서 맴 형태의 객체 리턴</h2>
  유저 정보(번호,번호,번호) : <input type="text" id="userIndexs2" onchange="test8();" />
  <p id="result8" style="width:300px; height:300px; border:1px solid red;"></p>
+
 <script>
 function test1(){
 	//값 가져오기
@@ -204,13 +205,26 @@ function test1(){
 	}
 	
 	function test8(){
-		var userIndexs2=$('#userIndex2').val();
+		var userIndexs2=$('#userIndexs2').val();
 		$.ajax({
 			url : "/test8"
 			data : {userIndexs2:userIndexs2},
 			type : "get",
 			success:function(data){
 				console.log("성공");
+				var result="";
+				//MAP형태로 꺼내려면 키 값을 먼저 추출해야 함
+				var keys=Object.keys(data);
+				
+				//JSON을 MAP형태로 데이터를 꺼내 오려면 
+				//data[키] 형태로 사용 해야 함
+				
+				for(var i=0; i<keys.length; i++){
+					result +="이름 :"+data[keys[i]].name+" / "
+					+"나이 :"+data[keys[i]].age+" / "
+					+"주소 :"+data[keys[i]].addr+"<br>";
+				}
+				$('#result8').html(result);
 				
 			},
 			error : function(){
