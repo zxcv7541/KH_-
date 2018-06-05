@@ -1,0 +1,43 @@
+*{margin:0; padding:0;}
+a{text-decoration:none;}
+li{list-style:none;}
+
+/* 헤더 부분 */
+header{
+    background:#fff;
+    position:fixed;
+    width:220px;
+    height:100%;
+    top:0; left:0;
+    border-right:1px solid #ddd;
+}
+
+h1{
+    font-size:18px; padding:20px;
+}
+
+.menu li a{
+    color:#555;
+    font-size:12px;
+    height:30px;
+    line-height:30px;
+    display:block;
+    padding:0 20px;
+}
+.menu li a:hover{
+    color:#007dc1;
+}
+
+/* 메인 부분 */
+section{
+    padding:20px;
+    padding-left:240px;
+    font-size:14px;
+}
+
+/* 푸터 부분 */
+footer{
+    padding-left:230px;
+    background-color:black;
+    color:white;
+}
